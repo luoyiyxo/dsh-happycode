@@ -5,27 +5,20 @@ in: the working copy is committed locally and `git remote` is empty on purpose.
 
 ```
 PENDING BEFORE PUBLISHING
-  [ ] real screenshots (menu row, dialog light + dark) replace the rendered previews
-  [ ] a short GIF of the dialog in use
+  [x] real screenshots of the dialog (light + dark) — captured 2026-10-25
+  [ ] optional: menu-row.png and a short GIF
 ```
 
-The dialog artwork in `screenshots/` is a **rendered preview** produced by
-`scripts/render-preview.mjs` from the same geometry the client draws — accurate about
-layout, honest about being synthetic. Capture the real thing before announcing:
+`screenshots/dialog-light.png` and `dialog-dark.png` are real 1:1 captures of the
+running dialog, wired into both READMEs. Two things are still welcome but do not
+block the release: a capture of the account menu showing **HappyCode** between
+Settings and Feedback, and a GIF of the dialog in use. To add them:
 
-1. Install locally (`pwsh -File scripts/install-local.ps1`) and open the dialog.
-2. Save at 2× scale if you can:
-   - `screenshots/menu-row.png` — the avatar menu, **HappyCode** between Settings and Feedback
-   - `screenshots/dialog-dark.png`
-   - `screenshots/dialog-light.png`
-3. Record a GIF (5–8 s, under 5 MB): menu → click → dialog → hover a few cells →
-   switch year → close. ScreenToGif (Windows), Kap (macOS) or `ffmpeg`/`peek` (Linux).
-4. Point the READMEs at it and drop the "rendered preview" sentence:
-
-   ```md
-   ![Happycoding Everyday in DeepSeek Harness](screenshots/dialog-dark.png)
-   ```
-5. Commit: `git add screenshots README.md README.zh.md && git commit -m "docs: real screenshots"`
+1. `screenshots/menu-row.png` — open the avatar menu, `Win+Shift+S`, save it here.
+2. `screenshots/happycode.gif` — 5–8 s, under 5 MB, menu → click → dialog → hover a
+   few cells → switch year → close. ScreenToGif (Windows), Kap (macOS),
+   `ffmpeg`/`peek` (Linux).
+3. Reference them from the READMEs and commit.
 
 ---
 
@@ -37,7 +30,7 @@ node test/store.test.mjs                 # 29 tests
 node test/host.test.mjs                  #  4 tests
 node test/client.test.mjs                # 20 tests
 node scripts/prepack-check.mjs           # packaging gate
-npm pack --dry-run                       # 18 files, ~44 KB, no node_modules
+npm pack --dry-run                       # 18 files, ~177 KB, no node_modules
 ```
 
 `npm pack --dry-run` should list exactly:
@@ -166,7 +159,7 @@ Notes for the PR:
 | Check | Result |
 |---|---|
 | 53 tests green on this machine | |
-| `npm pack` dry run lists 18 files, ~44 KB | |
+| `npm pack` dry run lists 18 files, ~177 KB | |
 | Repository pushed, license detected, topics set | |
 | `npm publish` succeeded, `npm view` shows 0.1.0 | |
 | Installed from the registry into a throwaway profile | |

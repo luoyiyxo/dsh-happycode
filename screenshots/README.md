@@ -1,22 +1,23 @@
 # Screenshots
 
-`dialog-light.svg` and `dialog-dark.svg` are **rendered previews**, not captures:
-`scripts/render-preview.mjs` draws them from the same geometry the client uses
-(21px cells, 3px gaps, Monday-based columns, Jan–Dec labels, the profile row, the
-brand at the right of the title bar) with synthetic data and a made-up identity.
+Real captures of the running plugin (DSH Desktop `0.2.1-rc.2`, Windows 11, a
+1500px-wide dialog at 1× scale):
 
-Replace them with real captures before announcing the plugin:
+| File | Shows |
+|---|---|
+| `dialog-light.png` | the dialog in the light theme: title band, profile row, the year's heatmap, year picker, legend |
+| `dialog-dark.png` | the same in the dark theme |
+
+Both frames are 1:1 captures of the dialog itself — the panel spans almost the whole
+image, which is why there is no surrounding backdrop.
+
+Still missing, and welcome as a follow-up PR:
 
 | File | What to capture |
 |---|---|
-| `menu-row.png` | the avatar menu, the entry between Settings and Feedback |
-| `dialog-dark.png` | the dialog, dark theme |
-| `dialog-light.png` | the dialog, light theme |
-| `happycode.gif` | menu → click → dialog → hover cells → switch year → close |
+| `menu-row.png` | the avatar menu with **HappyCode** between Settings and Feedback |
+| `happycode.gif` | menu → click → dialog → hover a few cells → switch year → close |
 
-Keep in mind that a capture of the real dialog also settles the one thing the
-preview cannot: whether the account-menu row is wide enough for
-`Happycoding Everyday` (it may need the short name `HappyCode` there).
-
-See `docs/RELEASE-CHECKLIST.md` § 1 for the recording suggestions and the README
-snippet that points at the GIF.
+`scripts/render-preview.mjs` can still draw an SVG preview of the layout (same
+geometry as the client) when a screenshot is not convenient; its output is not
+committed.

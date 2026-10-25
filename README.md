@@ -14,11 +14,13 @@
   <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
-![The dialog](screenshots/dialog-dark.svg)
+<p align="center">
+  <a href="screenshots/dialog-light.png"><img src="screenshots/dialog-light.png" width="49%" alt="Happycoding Everyday in DeepSeek Harness, light theme"></a>
+  <a href="screenshots/dialog-dark.png"><img src="screenshots/dialog-dark.png" width="49%" alt="Happycoding Everyday in DeepSeek Harness, dark theme"></a>
+</p>
 
 *Display name **Happycoding Everyday**; the package, the repository and the
-plugin id stay `dsh-happycode`. The screenshot above is a rendered preview — a real
-capture of the running dialog replaces it with the release.*
+plugin id stay `dsh-happycode`.*
 
 Happycoding Everyday reads the session logs DeepSeek Harness already writes on
 your machine, turns them into one number per day, and draws the year the way

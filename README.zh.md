@@ -9,10 +9,12 @@
   <a href="README.md">English</a> | 中文
 </p>
 
-![弹窗](screenshots/dialog-dark.svg)
+<p align="center">
+  <a href="screenshots/dialog-light.png"><img src="screenshots/dialog-light.png" width="49%" alt="Happycoding Everyday 弹窗，浅色主题"></a>
+  <a href="screenshots/dialog-dark.png"><img src="screenshots/dialog-dark.png" width="49%" alt="Happycoding Everyday 弹窗，深色主题"></a>
+</p>
 
-*显示名 **Happycoding Everyday**；npm 包名、仓库名与插件 id 仍是 `dsh-happycode`。
-上面这张是渲染预览图，发布时会换成运行中的真实截图。*
+*显示名 **Happycoding Everyday**；npm 包名、仓库名与插件 id 仍是 `dsh-happycode`。*
 
 Happycoding Everyday 读取 DSH 本来就写在你自己机器上的会话日志，把每天的活动折算成一个数，
 再用 GitHub 的那套画法画出来：横向是周、纵向是周一到周日、五档绿、每个格子都有 tooltip。
