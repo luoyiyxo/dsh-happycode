@@ -1,0 +1,79 @@
+{
+  "name": "dsh-happycode",
+  "version": "0.1.0",
+  "description": "Happycoding Everyday — your DeepSeek Harness activity as a GitHub-style contribution graph, year by year, straight from your local session logs. · 把你使用 DeepSeek Harness 的活动变成 GitHub 风格的年度贡献热力图。",
+  "icon": "assets/logo.svg",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "assets",
+    "screenshots",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "contribution-graph",
+    "heatmap"
+  ],
+  "license": "MIT",
+  "author": "HappyCode contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoyiyxo/dsh-happycode.git"
+  },
+  "homepage": "https://github.com/luoyiyxo/dsh-happycode",
+  "bugs": {
+    "url": "https://github.com/luoyiyxo/dsh-happycode/issues"
+  },
+  "engines": {
+    "node": ">=22.15",
+    "dsh": ">=0.2.1-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "test": "node test/store.test.mjs && node test/host.test.mjs && node test/client.test.mjs",
+    "render:preview": "node scripts/render-preview.mjs",
+    "prepack": "node scripts/prepack-check.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output (the client bundle is hand-written, nothing is generated)
+dist/
+*.tgz
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.log
