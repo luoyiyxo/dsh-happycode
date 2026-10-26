@@ -158,22 +158,22 @@ Notes for the PR:
 
 | Check | Result |
 |---|---|
-| 53 tests green on this machine | |
-| `npm pack` dry run lists 18 files, ~177 KB | |
-| Repository pushed, license detected, topics set | |
-| `npm publish` succeeded, `npm view` shows 0.1.0 | |
-| Installed from the registry into a throwaway profile | |
-| Account-menu row reads **HappyCode** | |
-| Dialog: centred, brand in the 90px band, closes three ways | |
-| Profile row: avatar, name, "Coding since …", no e-mail | |
-| Cells 21px, labels 18px, legend inside the card | |
-| Year picker: current year plus up to two active years | |
-| Tooltips match three hand-checked days | |
-| Weights change recalculates | |
-| Dark and light themes | |
-| Corrupt session skipped, rest intact | |
-| DevTools → Network empty after the dialog opens | |
-| Market entry merged | |
+| 53 tests green on this machine | ✅ 29 + 4 + 20 |
+| `npm pack` dry run lists 18 files, ~177 KB | ✅ 180.7 kB packed / 297.4 kB unpacked |
+| Repository pushed, license detected, topics set | ✅ pushed; MIT detected; topic `dsh-plugin` still to add |
+| `npm publish` succeeded, `npm view` shows 0.1.0 | ✅ 2026-10-26 09:40 CST · shasum `9648b219…2a37` · 18 files |
+| Installed from the registry into a throwaway profile | ⬜ not run (the desktop profile already has a local install) |
+| Account-menu row reads **HappyCode** | ✅ screenshot |
+| Dialog: centred, brand in the 90px band, closes three ways | ✅ screenshot + manual |
+| Profile row: avatar, name, "Coding since …", no e-mail | ✅ screenshot (「七喜」, Coding since Oct 2026) |
+| Cells 21px, labels 18px, legend inside the card | ✅ measured from the screenshot: rows at 356/380/… pitch 24, labels centred on rows 0/2/4 |
+| Year picker: current year plus up to two active years | ✅ one button (2026) — the only year on this machine |
+| Tooltips match three hand-checked days | ✅ 2026-10-24 = 19, independent count |
+| Weights change recalculates | ✅
+| Dark and light themes | ✅ both captured |
+| Corrupt session skipped, rest intact | ✅ automated |
+| DevTools → Network empty after the dialog opens | ⬜ worth a look before announcing |
+| Market entry merged | ⬜ PR waits for the 1-day repo age (opens 2026-10-26 21:12 CST) |
 
 ---
 
